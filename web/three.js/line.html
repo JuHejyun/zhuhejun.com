@@ -1,0 +1,87 @@
+<html>
+<head>
+  <title>line</title>
+  <style>
+    body, div {
+      margin: 0px;
+      padding: 0px;
+    }
+    #viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="threejs-output"></div>
+  <script src="lib/Detector.js"></script>
+  <script src="../kbq/lib/three.js"></script>
+  <script src="lib/TrackballControls.js"></script>
+  <script>
+     if (!Detector.webgl) {
+        var msg = Detector.getWebGLErrorMessage();
+        document.getElementById('threejs-output').appendChild(msg);
+    }
+
+
+    var outh = window.innerWidth,
+        outw = window.innerHeight;
+	//场景和视角
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, outh / outw, 0.1, 2000);
+    camera.position.set(5, 5, 5);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+	//Renderer
+    var renderer = new THREE.WebGLRenderer({antialias: true});
+    renderer.setSize(outh, outw);
+    renderer.setClearColor(0x000000, 1);
+    document.getElementById('threejs-output').appendChild(renderer.domElement);
+
+    var controls = new THREE.TrackballControls(camera, renderer.domElement);
+	
+	//画出坐标轴
+    function drawCoords(scene) {
+        var xmat = new THREE.LineBasicMaterial({color: 0xff0000});
+        var ymat = new THREE.LineBasicMaterial({color: 0x00ff00});
+        var zmat = new THREE.LineBasicMaterial({color: 0x0000ff});
+
+        var xgeo = new THREE.Geometry();
+        xgeo.vertices.push(
+            new THREE.Vector3(-5, 0, 0),
+            new THREE.Vector3(5, 0, 0),
+            new THREE.Vector3(4.8, 0.2, 0)
+        );
+        var ygeo = new THREE.Geometry();
+        ygeo.vertices.push(
+            new THREE.Vector3(0, -5, 0),
+            new THREE.Vector3(0, 5, 0),
+            new THREE.Vector3(0.2, 4.8, 0)
+        );
+        var zgeo = new THREE.Geometry();
+        zgeo.vertices.push(
+            new THREE.Vector3(0, 0, -5),
+            new THREE.Vector3(0, 0, 5),
+            new THREE.Vector3(0, 0.2, 4.8)
+        );
+
+        var xline = new THREE.Line(xgeo, xmat);
+        var yline = new THREE.Line(ygeo, ymat);
+        var zline = new THREE.Line(zgeo, zmat);
+
+        scene.add(xline);
+        scene.add(yline);
+        scene.add(zline);
+    }
+
+    function render() {
+        requestAnimationFrame(render);
+        controls.update();
+        renderer.render(scene, camera);
+    }
+
+    drawCoords(scene);
+    render();
+  </script>
+</body>
+</html>
