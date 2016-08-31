@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>IMG_0309</title>
+  <style>
+    body, div {
+      margin: 0px;
+      padding: 0px;
+    }
+    #viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+  <script src="../js/lib/async.js"></script>
+  <script src="../js/lib/three.js"></script>
+  <script src="../js/lib/OrbitControls.js"></script>
+  <script src="../js/lib/theta-viewer.js"></script>
+  <script>
+    var viewer = new ThetaViewer( document.getElementById("viewer") );
+    viewer.images = ["./img/IMG_0309.JPG"];
+    viewer.interval = 200;
+    viewer.autoRotate = true;
+    viewer.load();
+  </script>
+</body>
+</html>
