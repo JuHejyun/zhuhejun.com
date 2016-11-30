@@ -154,12 +154,12 @@ var qhMarkers = [{
 },{
 	title:"东关清真寺1",
 	icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
-	position: [101.7976050, 36.6158080],
+	position: [101.796254, 36.615522],
 	url:"../qh/IMG_0347.html"
 },{
 	title:"东关清真寺2",
 	icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
-	position: [101.7976150, 36.6157080],
+	position: [101.795363, 36.615450],
 	url:"../qh/IMG_0348.html"
 }]
 markers = markers.concat(qhMarkers);
