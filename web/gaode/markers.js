@@ -194,5 +194,5 @@ var yaMarkers = [{
 	icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
 	position: [117.255766, 25.811649],
 	url:"../ya/PANO_20160211_094422.html"
-},]
+}]
 markers = markers.concat(yaMarkers);
