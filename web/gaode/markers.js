@@ -174,3 +174,25 @@ var qzlMarkers = [{
 }]
 markers = markers.concat(qzlMarkers);
 
+var yaMarkers = [{
+	title:"永安1",
+	icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
+	position: [117.255784, 25.811913],
+	url:"../ya/PANO_20160208_112841.html"
+},{
+	title:"永安2",
+	icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
+	position: [117.255743, 25.811863],
+	url:"../ya/PANO_20160208_113408.html"
+},{
+	title:"永安3",
+	icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
+	position: [117.255774, 25.811762],
+	url:"../ya/PANO_20160210_111341.html"
+},{
+	title:"永安4",
+	icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
+	position: [117.255766, 25.811649],
+	url:"../ya/PANO_20160211_094422.html"
+}]
+markers = markers.concat(yaMarkers);
