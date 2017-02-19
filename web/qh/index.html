@@ -4,28 +4,54 @@
     <meta charset="UTF-8">
     <title>青海全景图</title>
     <style type="text/css">
-        .content a{
+        html,body{
+            margin:0px;
+            height:100%;
+        }
+        .content{
+            width:100%;
+            height:100%;
+            MARGIN: 0px auto;
+            /* 加载背景图 */
+            background-image: url(img/IMG_0261.JPG);
+            /* 背景图垂直、水平均居中 */
+            background-position: center center;
+            /* 背景图不平铺 */
+            background-repeat: no-repeat;
+            /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+            background-attachment: fixed;
+            /* 让背景图基于容器大小伸缩 */
+            background-size: cover;
+            text-align:center;
+        }
+        .center{display:inline-block;margin: 50px 0 0 0;}
+        .center{_display:inline;} /*针对ie6 hack*/
+        .center a{
             display: block;
             text-align: center;
+            text-decoration:none;
+            color: coral;
         }
     </style>
 </head>
 <body>
 <div class="content">
-    <a href="IMG_0110.html">塔尔寺1</a><br>
-    <a href="IMG_0115.html">塔尔寺2</a><br>
-    <a href="IMG_0120.html">拉鸡山</a><br>
-    <a href="IMG_0193.html">青海湖1</a><br>
-    <a href="IMG_0262.html">青海湖2</a><br>
-    <a href="IMG_0294.html">黑马河1</a><br>
-    <a href="IMG_0295.html">黑马河2</a><br>
-    <a href="IMG_0305.html">茶卡盐湖1</a><br>
-    <a href="IMG_0306.html">茶卡盐湖2</a><br>
-    <a href="IMG_0307.html">茶卡盐湖3</a><br>
-    <a href="IMG_0309.html">橡皮山</a><br>
-    <a href="IMG_0343.html">贵德地质公园</a><br>
-    <a href="IMG_0347.html">东关清真寺1</a><br>
-    <a href="IMG_0348.html">东关清真寺2</a><br>
+    <div class="center">
+        <a href="IMG_0110.html">塔尔寺1</a><br>
+        <a href="IMG_0115.html">塔尔寺2</a><br>
+        <a href="IMG_0120.html">拉鸡山</a><br>
+        <a href="IMG_0193.html">青海湖1</a><br>
+        <a href="IMG_0262.html">青海湖2</a><br>
+        <a href="IMG_0294.html">黑马河1</a><br>
+        <a href="IMG_0295.html">黑马河2</a><br>
+        <a href="IMG_0305.html">茶卡盐湖1</a><br>
+        <a href="IMG_0306.html">茶卡盐湖2</a><br>
+        <a href="IMG_0307.html">茶卡盐湖3</a><br>
+        <a href="IMG_0309.html">橡皮山</a><br>
+        <a href="IMG_0343.html">贵德地质公园</a><br>
+        <a href="IMG_0347.html">东关清真寺1</a><br>
+        <a href="IMG_0348.html">东关清真寺2</a><br>
+    </div>
 </div>
 <!--谷歌网站统计-->
 <script>
